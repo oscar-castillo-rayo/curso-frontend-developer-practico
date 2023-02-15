@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector(".desktop-menu");
 const menuHamMenuIcon = document.querySelector(".menu");
 const menuShopCarIcon = document.querySelector(".navbar-shopping-cart");
 const mobileMenu = document.querySelector(".mobile-menu");
-const mobileDetailMenu = document.querySelector(".product-detail");
+const shoppingCarContainer = document.querySelector("#shoppingCarContainer");
 const cardsContainer = document.querySelector(".cards-container");
 
 //agregar los eventos click a los
@@ -12,19 +12,19 @@ menuHamMenuIcon.addEventListener("click", toggleMobileMenu);
 menuShopCarIcon.addEventListener("click", toogleShopCarMenu);
 
 function toogleDesktopMenu() {
-  const mobileDetailMenuClose = mobileDetailMenu.classList.contains("inactive");
-  if (!mobileDetailMenuClose) {
-    mobileDetailMenu.classList.toggle("inactive");
+  const asideClose = shoppingCarContainer.classList.contains("inactive");
+  if (!asideClose) {
+    shoppingCarContainer.classList.toggle("inactive");
   }
 
   desktopMenu.classList.toggle("inactive");
 }
 
 function toggleMobileMenu() {
-  const mobileDetailMenuClose = mobileDetailMenu.classList.contains("inactive");
+  const asideClose = shoppingCarContainer.classList.contains("inactive");
   //Implementación de la lógica: si el menú del carrito no esta cerrado(es decir, que está abierto). Entonces coloquele la clase inactive para que se cierre. de lo contrario aplique un toogle con la clase inactive para que aparezca o desaparesca el menú.
-  if (!mobileDetailMenuClose) {
-    mobileDetailMenu.classList.toggle("inactive");
+  if (!asideClose) {
+    shoppingCarContainer.classList.toggle("inactive");
   }
   mobileMenu.classList.toggle("inactive");
 }
@@ -40,7 +40,7 @@ function toogleShopCarMenu() {
     desktopMenu.classList.toggle("inactive");
   }
 
-  mobileDetailMenu.classList.toggle("inactive");
+  shoppingCarContainer.classList.toggle("inactive");
 }
 
 const productList = [];
