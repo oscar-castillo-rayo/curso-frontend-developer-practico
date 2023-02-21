@@ -360,7 +360,8 @@ aside {
 }
 
 #productDetail {
-  margin: 24px 24px 0 24px;
+  margin: 16px 16px 16px 16px;
+  padding: 0.5rem;
 }
 
 #productDetail p:nth-child(1) {
